@@ -17,11 +17,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.iwtechnocrat.waljon.Activities.Act_Cart;
+import com.iwtechnocrat.waljon.Activities.Act_Profile;
 import com.iwtechnocrat.waljon.Activities.Act_Search;
 import com.iwtechnocrat.waljon.Activities.Act_Wishlist;
 import com.iwtechnocrat.waljon.Fragment.Categories_Frag;
 import com.iwtechnocrat.waljon.Fragment.HommeeFragment;
 import com.iwtechnocrat.waljon.Fragment.Profile_Frag;
+import com.iwtechnocrat.waljon.GoogleMap.PlaceSearch;
 import com.iwtechnocrat.waljon.GoogleMap.SearchCity;
 
 public class Act_Home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener  {
@@ -30,7 +33,7 @@ public class Act_Home extends AppCompatActivity implements BottomNavigationView.
     Toolbar  toolbar;
     SearchView mSearchView;
     BottomNavigationView navigation;
-    ImageView search,wishlist,map;
+    ImageView search,wishlist,map,cart;
 
 
     @Override
@@ -43,6 +46,7 @@ public class Act_Home extends AppCompatActivity implements BottomNavigationView.
 
 
       navigation = findViewById(R.id.navigation);
+        cart = findViewById(R.id.cart);
         wishlist = findViewById(R.id.wishlist);
         navigation.setOnNavigationItemSelectedListener(this);
         search = findViewById(R.id.search);
@@ -75,7 +79,15 @@ public class Act_Home extends AppCompatActivity implements BottomNavigationView.
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SearchCity.class);
+                Intent intent = new Intent(getApplicationContext(), PlaceSearch.class);
+                startActivity(intent);
+            }
+        });
+
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Act_Cart.class);
                 startActivity(intent);
             }
         });
@@ -91,7 +103,8 @@ public class Act_Home extends AppCompatActivity implements BottomNavigationView.
                 break;
 
             case R.id.nav_profile:
-                fragment = new Profile_Frag();
+              Intent intent = new Intent(getApplicationContext(), Act_Profile.class);
+              startActivity(intent);
                 break;
    case R.id.nav_categories:
                 fragment = new Categories_Frag();

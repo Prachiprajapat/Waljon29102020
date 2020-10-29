@@ -6,4 +6,75 @@
     <string name="login">Please Join Us For Best Nursing Practice</string>
     <string name="search">Search Your Products here...</string>
     <string name="wishlist">Save items that you like in your wishlist Review them anytime and easily move them to the bag</string>
+    <string name="cart">There is nothing in your bag,Lets add some items</string>
+    <string name="google_maps_web_key">AIzaSyCS1I5JTWvLFES02f1Vzf9JC3W65mBDnps</string>
+    <string name="cancelpolicy">Please tell us corect reason for cancellation.This information is only used to improve our service</string>
+    <string name="question1">What is waljon cancellation policy ?</string>
+    <string name="question2">Can I modify the shipping address of my order after it has been placed ?</string>
+    <string name="question3">How do i cancel my order ?</string>
+    <string name="question4">I just cancelled My order when will i recieve  my refund ?</string>
+    <string name="question5">What are there different prices for the same product? is it legal ?</string>
+    <string name="question6">How will i detect fraudulent emails/calls seeking sensitive personal and confidential information ?</string>
+    <string name="question7">How do i create a return request ?</string>
+
+
+
+    <string name="answer1">You Can cancel an order when it is in packed /shipped status as long as the
+        cancel option is available on App .This includes items purchased on sale also .Any amount paid will be credited into the same paymet
+         mode using which the payment was made?</string>
+    <string name="answer2">can yes you can modify the shipping address of yor order before we have processed it , by updating it under change address option which is available under my order section of app / website </string>
+    <string name="answer3">tap on my orders section under the main mwnu of your app/website and then select the item or order you want </string>
+    <string name="answer4">if you selected cash on delivery , there is no amount to be return because you have not paid for your order for payments made via credit card debit card net banking you will receive refund into the source amount within 7-10 days from the time of orde cancelled   </string>
+    <string name="answer5">Waljon is an online market place platform that enables independent sellers to sell their products to buyers.
+    The prices are solely decided by the seller and waljon does not interface in the same.There could be a possibility that the same product
+     is sold by different sellers at different prices . Waljon rightfully fullfils all legal complainces of on boarding multiple sellers on its
+    forum as it is a marketplace platform</string>
+    <string name="answer6">If you recieve an email , a call from person /asociation claimimg to be from waljon seeking sensitive confidential information
+    like debit/credit card P/N  or mobile banking password ,we request you to never provides such confidential and personal data .we at
+     waljon our affliate logistics partner never ask for such confidential and personal  data ,if you have alreday created such
+    information report immidiately  to an appropriate low enforcement agency</string>
+    <string name="answer7">You can create a return  in three simple steps
+    1.Tap on My Orders
+    2.Choose the item to  be Returned
+    3.Enter details requested and create  a return request</string>
+
+
+    <string name="question11">How do i check the status of my order?</string>
+    <string name="answer11">Please tap on "My Orders" section under main menu of App/Website to check your order status</string>
+    <string name="question12">How are orders placed on waljon delivered  to me?</string>
+    <string name="answer12">All Orders placed on waljon are dispached through our own carreir Service - Waljon logistics our through other
+    courier partner</string>
+    <string name="question13">Does waljon deliver products outside india?</string>
+    <string name="answer13">No at this point waljon delivers product only within india</string>
+
+
+
+    <string name="question21">How do i create an account  on waljon?</string>
+    <string name="answer21">You can create your account on waljon by entering and verifying your mobile number click
+    on create  new account after that and fill up the form to create your  waljon acount </string>
+    <string name="question22">How do i login on waljon ? i used to login with email ,google,facebook login?</string>
+    <string name="answer22">For old users of waljon who used to login with email /google/facebook ,enter your mobile number and OTP then choose your method of
+    login under Already have an account ? once you have enterred the details you will be logged in to your account Next time onwards you can use
+    you can use your mobile and otp for easy login</string>
+    <string name="question23">What if i dont recieve an OTP due to poor network connectivity?</string>
+    <string name="answer23">If you are not recieving an OTP use te login with password Option to login your waljon account</string>
+    <string name="question24">Do i need to provide emails to create an account on waljon ?</string>
+    <string name="answer24">Providing an email is not manditory to create an account on waljon however we still recommend adding your email to your account as it will allow you to easily rest your password if you need  </string>
+    <string name="question25">I have given my mobile number in my last order can i use that number to login waljon ?</string>
+    <string name="answer25">mobile numbers given along with shipping address cannot be used to log in on waljon to use a nimber for login on waljon you need to add your number to your profile and verify it with OTP this can be done under profile section in account  </string>
+
+
+
+    <string name="question31">How can i pay for my order at waljon ?</string>
+    <string name="answer31">we support thw following payment option at waljon </string>
+    <string name="question32">What should i do if my payment fails ?</string>
+    <string name="answer32">Please retry making the payment after ensuring that the information entered is accurate including all
+     account details billing address and passwords if your payment still fails you can use the  cash on delivery (COD) payment option
+    ,if available on the payment page to place your  order ,if your payment is debited from your account  after a payment failure
+    ,it will be credited back within 7-10 days ,after we recieving a confirmation from the bank</string>
+
+
+
+
 </resources>
+

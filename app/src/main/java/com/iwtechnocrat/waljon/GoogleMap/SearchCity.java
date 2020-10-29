@@ -1,11 +1,14 @@
 package com.iwtechnocrat.waljon.GoogleMap;
 
 import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import android.location.LocationListener;
+
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +18,16 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -30,14 +38,21 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.location.LocationListener;
 import com.iwtechnocrat.waljon.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.nlopez.smartlocation.location.providers.LocationGooglePlayServicesProvider;
+
+import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static com.google.android.gms.location.LocationServices.FusedLocationApi;
+
 public class SearchCity extends FragmentActivity implements OnMapReadyCallback,
-        LocationListener, GoogleApiClient.ConnectionCallbacks,
+        com.google.android.gms.location.LocationListener, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
 
 
@@ -47,6 +62,11 @@ public class SearchCity extends FragmentActivity implements OnMapReadyCallback,
     GoogleApiClient mGoogleApiClient;
     LocationRequest mLocationRequest;
     Button btn_search;
+    private FusedLocationProviderClient fusedLocationClient;
+
+    //public  int PERMISSION_REQUEST_CODE= 1;
+    final private int PERMISSION_REQUEST_CODE = 124;
+    private Object LocationGooglePlayServicesProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +74,20 @@ public class SearchCity extends FragmentActivity implements OnMapReadyCallback,
         setContentView(R.layout.activity_search_city);
 
         btn_search = findViewById(R.id.btn_search);
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(SearchCity.this);
+
+
+
+        if (!checkPermission()) {
+            requestPermission();
+        }
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
 
 
         btn_search.setOnClickListener(new View.OnClickListener() {
@@ -112,24 +141,11 @@ public class SearchCity extends FragmentActivity implements OnMapReadyCallback,
 
         //stop location updates
         if (mGoogleApiClient != null) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, (com.google.android.gms.location.LocationListener) this);
+            FusedLocationApi.removeLocationUpdates(mGoogleApiClient, (com.google.android.gms.location.LocationListener) this);
         }
     }
 
-    @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
 
-    }
-
-    @Override
-    public void onProviderEnabled(String provider) {
-
-    }
-
-    @Override
-    public void onProviderDisabled(String provider) {
-
-    }
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
@@ -138,11 +154,12 @@ public class SearchCity extends FragmentActivity implements OnMapReadyCallback,
         mLocationRequest.setFastestInterval(1000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
         if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
+                ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
-            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, (com.google.android.gms.location.LocationListener) this);
-        }
+            //  PendingResult<Status> statusPendingResult = FusedLocationApi.requestLocationUpdates(mLocationRequest, mGoogleApiClient);
+            PendingResult locationUpdatesResult = FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
 
+        }
     }
 
     @Override
@@ -152,6 +169,23 @@ public class SearchCity extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        buildGoogleApiClient();
+    }
+
+
+
+
+
+    public void onStatusChanged(String s, int i, Bundle bundle) {
+
+    }
+
+
+    public void onProviderEnabled(String s) {
+
+    }
+
+    public void onProviderDisabled(String s) {
 
     }
 
@@ -161,7 +195,7 @@ public class SearchCity extends FragmentActivity implements OnMapReadyCallback,
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)
+                    ACCESS_FINE_LOCATION)
                     == PackageManager.PERMISSION_GRANTED) {
                 buildGoogleApiClient();
                 mMap.setMyLocationEnabled(true);
@@ -180,6 +214,60 @@ public class SearchCity extends FragmentActivity implements OnMapReadyCallback,
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API).build();
         mGoogleApiClient.connect();
+    }
+
+
+
+    private boolean checkPermission() {
+        int result = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_FINE_LOCATION);
+        int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_COARSE_LOCATION);
+
+        return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED;
+    }
+    private void requestPermission() {
+
+        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST_CODE);
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_CODE:
+                if (grantResults.length > 0) {
+
+                    boolean fineLocationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                    boolean coarseLocationAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+
+                    if (!(fineLocationAccepted && coarseLocationAccepted)) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            if (shouldShowRequestPermissionRationale(ACCESS_FINE_LOCATION)) {
+                                showMessageOKCancel("You need to allow access to both the permissions",
+                                        new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION},
+                                                            PERMISSION_REQUEST_CODE);
+                                                }
+                                            }
+                                        });
+                                return;
+                            }
+                        }
+                    }
+                }
+
+                break;
+        }
+    }
+    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
+        new AlertDialog.Builder(SearchCity.this)
+                .setMessage(message)
+                .setPositiveButton("OK", okListener)
+                .setNegativeButton("Cancel", null)
+                .create()
+                .show();
     }
 
 //    public void searchLocation(View view) {

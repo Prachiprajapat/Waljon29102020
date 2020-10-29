@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".1"
+                    android:src="@drawable/ic_baseline_arrow_back_24">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".9"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="2dp"
+                        android:text="FAQs"
+                        android:textSize="16sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey">
+
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="Cancellation and Modifications"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:padding="2dp"-->
+<!--                    android:text="You can cancel your order under Waljon"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="normal">-->
+
+<!--                </TextView>-->
+
+<!--                <Button-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginBottom="2dp"-->
+<!--                    android:background="@drawable/wishlist_background"-->
+<!--                    android:padding="2dp"-->
+<!--                    android:text="cancel item"-->
+<!--                    android:textColor="@color/blue">-->
+
+<!--                </Button>-->
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/que1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/question1"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ans1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer1"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/que2"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/question2"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ans2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer2"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que3"
+                    android:text="@string/question3"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+
+
+
+                <TextView
+                    android:id="@+id/ans3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer3"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que4"
+                    android:text="@string/question4"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/ans4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer4"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins"
+                        android:padding="2dp"
+                        android:text="Top Queries"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey">
+
+                </View>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/que5"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/question5"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ans5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer5"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que6"
+                    android:text="@string/question6"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ans6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer6"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que7"
+                    android:text="@string/question7"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ans7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer7"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="shipping Order Tracking and Delivery"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="You can cancel your order under Waljon"-->
+                <!--                    android:textSize="14sp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:padding="2dp"-->
+                <!--                    android:fontFamily="@font/poppins"-->
+                <!--                    android:textStyle="normal"-->
+                <!--                    android:textColor="@color/black">-->
+
+                <!--                </TextView>-->
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey">
+
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que8"
+                    android:text="@string/question11"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ans8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer11"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que9"
+                    android:text="@string/question12"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/ans9"
+                    android:text="@string/answer12"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que10"
+                    android:text="@string/question13"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/ans10"
+                    android:text="@string/answer13"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="Signup  and login"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey">
+
+            </View>
+
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="You can cancel your order under Waljon"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:padding="2dp"-->
+            <!--                    android:fontFamily="@font/poppins"-->
+            <!--                    android:textStyle="normal"-->
+            <!--                    android:textColor="@color/black">-->
+
+            <!--                </TextView>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que11"
+                    android:text="@string/question21"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/ans11"
+                    android:text="@string/answer21"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que12"
+                    android:text="@string/question22"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/ans12"
+                    android:text="@string/answer22"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que13"
+                    android:text="@string/question23"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/ans13"
+                    android:text="@string/answer23"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que14"
+                    android:text="@string/question24"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/ans14"
+                    android:text="@string/answer24"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que15"
+                    android:text="@string/question25"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/ans15"
+                    android:text="@string/answer25"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="Payments"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que16"
+                    android:text="@string/question31"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/ans16"
+                    android:text="@string/answer31"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:id="@+id/que17"
+                    android:text="@string/question32"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="@string/answer32"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:id="@+id/ans17"
+                    android:textStyle="normal"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

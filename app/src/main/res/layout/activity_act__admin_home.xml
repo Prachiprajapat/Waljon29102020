@@ -13,15 +13,6 @@
         android:layout_height="wrap_content" />
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:layout_gravity="bottom"
-        app:itemTextColor="@color/dark_blue1"
-        app:itemIconTint="@color/grey"
-        app:menu="@menu/nav_item" />
 
 
 

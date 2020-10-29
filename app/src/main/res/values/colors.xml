@@ -13,4 +13,7 @@
     <color name="transparent">#00000000</color>
     <color name="input">#f2f2f2</color>
     <color name="red">#ed2f2f</color>
+    <color name="green">#3ec9c5</color>
+    <color name="colorText">#000111</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

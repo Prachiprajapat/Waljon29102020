@@ -2,22 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.iwtechnocrat.waljon">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!--    <permission-->
-    <!--        android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE"-->
-    <!--        android:protectionLevel="signature" />-->
-
-    <!--    <uses-permission android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" />-->
-
-
-
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- <permission -->
+    <!-- android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" -->
+    <!-- android:protectionLevel="signature" /> -->
+    <!-- <uses-permission android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" /> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--   // <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- // <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required to show current location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -41,10 +32,17 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="stateHidden">
-        <activity android:name=".Act_Home"></activity>
-        <activity android:name=".GoogleMap.SearchCity"></activity>
-        <activity android:name=".Activities.Act_Wishlist"></activity>
-        <activity android:name=".Activities.Act_Search"></activity>
+        <activity android:name=".Activities.Act_ViewPolicy"></activity>
+        <activity android:name=".Activities.Act_CancelOrder" />
+        <activity android:name=".GoogleMap.PlaceSearch" />
+        <activity android:name=".Activities.Act_OrderDetails" />
+        <activity android:name=".Activities.Act_MyOrder" />
+        <activity android:name=".Activities.Act_Profile" />
+        <activity android:name=".Activities.Act_Cart" />
+        <activity android:name=".Act_Home" />
+        <activity android:name=".GoogleMap.SearchCity" />
+        <activity android:name=".Activities.Act_Wishlist" />
+        <activity android:name=".Activities.Act_Search" />
         <activity android:name=".Act_splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,15 +51,12 @@
             </intent-filter>
         </activity>
 
-
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyCS1I5JTWvLFES02f1Vzf9JC3W65mBDnps" />
-
-
-
-
-
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

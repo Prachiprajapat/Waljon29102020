@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:weightSum="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight=".9"
+
+                android:text=" Track item"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_deletebutton"
+                android:padding="5dp"
+                android:layout_weight=".1"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp"
+                android:text="Cancel"
+                android:id="@+id/btn_cancel"
+                android:textColor="@color/colorText"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:id="@+id/lay11">
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:id="@+id/lay1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@color/green"
+                            app:civ_border_color="#fff"
+                            app:civ_border_width="5dp" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@color/green"
+                            app:civ_border_color="#fff"
+                            app:civ_border_width="5dp" />
+
+                        <View
+                            android:id="@+id/view13"
+                            android:layout_width="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@color/green"
+                            app:civ_border_color="#fff"
+                            app:civ_border_width="5dp" />
+
+                        <View
+                            android:id="@+id/view12"
+                            android:layout_width="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:padding="2dp"
+                    android:id="@+id/lay12"
+                    android:layout_toRightOf="@+id/lay11">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"
+                        android:text="Arriving 31/10/2020">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:id="@+id/lay133"
+                    android:layout_toRightOf="@+id/lay11"
+                    android:layout_below="@+id/lay12">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"
+                        android:text="Pickup 31/10/2020">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/lay11"
+                    android:layout_below="@+id/lay133">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"
+                        android:text="Order Placed 31/10/2020">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
