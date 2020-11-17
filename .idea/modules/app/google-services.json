@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "464405163207",
+    "firebase_url": "https://waljon-ca9a1.firebaseio.com",
+    "project_id": "waljon-ca9a1",
+    "storage_bucket": "waljon-ca9a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464405163207:android:c8a429a4538f4296a4a2e2",
+        "android_client_info": {
+          "package_name": "com.iwtechnocrat.waljon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464405163207-lnltt1skcf4hrhf5to80gtek65k1kae0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iwtechnocrat.waljon",
+            "certificate_hash": "bbe7cc458ca6a07898aaa9936d5b7bc28a6e5507"
+          }
+        },
+        {
+          "client_id": "464405163207-gm3sk2q6r9blpc4ptt3pcuq44vnpn2bp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2VnDgGoFeyaUz3Gw00zDap9QJzU5XUH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464405163207-gm3sk2q6r9blpc4ptt3pcuq44vnpn2bp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

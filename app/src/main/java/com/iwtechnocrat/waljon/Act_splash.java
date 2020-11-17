@@ -22,6 +22,7 @@ public class Act_splash extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), Act_Home.class);
                 startActivity(intent);
+                finish();
 
             }
 

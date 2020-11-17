@@ -14,7 +14,7 @@ import com.iwtechnocrat.waljon.R;
 public class ViewPagerCustomerAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
-    private Integer [] images = {R.drawable.cosmatics, R.drawable.cosmatics1, R.drawable.jwelleryone, R.drawable.cosmatics};
+    private Integer [] images = {R.drawable.cosmatics, R.drawable.skin, R.drawable.hiar, R.drawable.foot_wear};
 
     public ViewPagerCustomerAdapter(Context context) {
         this.context = context;

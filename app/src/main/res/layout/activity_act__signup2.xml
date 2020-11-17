@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="1dp"
+    android:orientation="vertical"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="50dp"
+        android:scrollbars="vertical"
+        android:orientation="vertical">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:isScrollContainer="true"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:padding="2dp">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight=".2"
+                    android:id="@+id/back"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_baseline_arrow_back_24">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete your signup"
+                    android:padding="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="14sp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:padding="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="normal"
+                    android:textSize="10sp">
+
+                </TextView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9795214589"
+                        android:padding="2dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="normal"
+                        android:textSize="12sp">
+
+                    </TextView>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_check_11"
+                        app:civ_border_color="@color/green"
+                        app:civ_border_width="2dp" />
+
+                </RelativeLayout>
+
+                    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Create Password"
+                        android:inputType="textPassword"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:padding="10dp"
+                        app:fontFamily="@font/poppins" />
+
+                <EditText
+                    android:id="@+id/et_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Full Name "
+                    android:inputType="text"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    app:fontFamily="@font/poppins" />
+                <EditText
+                    android:id="@+id/userFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Email"
+                    android:inputType="text"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    app:fontFamily="@font/poppins" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="1">
+                    <EditText
+                        android:id="@+id/female"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:hint="Female"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:layout_weight=".5"
+                        android:inputType="textPassword"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/border"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:padding="10dp"
+                        app:fontFamily="@font/poppins" />
+
+                    <EditText
+                        android:id="@+id/male"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:hint="Male"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:layout_weight=".5"
+                        android:inputType="textPassword"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/border"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:padding="10dp"
+                        app:fontFamily="@font/poppins" />
+
+
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Signup"
+                    android:id="@+id/btn_signup"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@color/dark_blue1"
+                    android:layout_marginRight="20dp">
+
+                </Button>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

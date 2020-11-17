@@ -16,4 +16,10 @@
     <color name="green">#3ec9c5</color>
     <color name="colorText">#000111</color>
     <color name="colorWhite">#FFFFFF</color>
+
+
+    <color name="colorWhite1">#ffffff</color>
+    <color name="darkgray">#737475</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransparent">@android:color/transparent</color>
 </resources>

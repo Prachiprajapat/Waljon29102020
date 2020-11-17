@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +13,7 @@ import android.widget.TextView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.iwtechnocrat.waljon.Act_Home;
 import com.iwtechnocrat.waljon.Adapter.Ad_Cart;
-import com.iwtechnocrat.waljon.Model.CartModel;
+import com.iwtechnocrat.waljon.Model.CartModel11;
 import com.iwtechnocrat.waljon.R;
 
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class Act_Cart extends AppCompatActivity {
     TextView tv_wishlist;
     BottomSheetBehavior behavior;
     RecyclerView recycle_cart;
-    ArrayList<CartModel> cartModels = new ArrayList<>();
+    ArrayList<CartModel11> cartModels = new ArrayList<>();
 
 
 
@@ -59,7 +58,7 @@ public class Act_Cart extends AppCompatActivity {
 
         });
 
-        cartModels.add(new CartModel("1",R.drawable.watch,"MINI CLUB","Boys Navy Blue Solid JAcket","6-12","2","645","50"));
+        cartModels.add(new CartModel11("1",R.drawable.watch,"MINI CLUB","Boys Navy Blue Solid JAcket","6-12","2","645","50"));
         Ad_Cart ad_cart = new Ad_Cart(getApplicationContext(),cartModels);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recycle_cart.setLayoutManager(linearLayoutManager);

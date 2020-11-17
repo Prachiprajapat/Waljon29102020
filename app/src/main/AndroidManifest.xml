@@ -8,9 +8,11 @@
     <!-- <uses-permission android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" /> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- // <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> -->
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required to show current location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -32,7 +34,20 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="stateHidden">
-        <activity android:name=".Activities.Act_ViewPolicy"></activity>
+        <activity android:name=".Activities.CategoryPage" />
+        <activity android:name=".Activities.Act_CAtegories" />
+        <activity android:name=".Activities.Act_ShowAddress" />
+        <activity android:name=".Activities.Act_Add_Address" />
+        <activity android:name=".Activities.Act_UpdateNumber" />
+        <activity android:name=".Activities.Act_profileDetails" />
+        <activity android:name=".Activities.Act_Login" />
+        <activity android:name=".Activities.Act_ChoosLoginWith" />
+        <activity android:name=".Activities.Act_Signup" />
+        <activity android:name=".Activities.Act_OTP" />
+        <activity android:name=".Activities.Act_VerifyNumber" />
+        <activity android:name=".ActvityHome" />
+        <activity android:name=".Activities.CartActivity" />
+        <activity android:name=".Activities.Act_ViewPolicy" />
         <activity android:name=".Activities.Act_CancelOrder" />
         <activity android:name=".GoogleMap.PlaceSearch" />
         <activity android:name=".Activities.Act_OrderDetails" />

@@ -14,13 +14,22 @@ import android.widget.ListView;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.iwtechnocrat.waljon.Adapter.Ad_RecentlyViewd;
 import com.iwtechnocrat.waljon.Adapter.Ad_ShopByBrand;
+import com.iwtechnocrat.waljon.Adapter.Ad_TopCategories;
+import com.iwtechnocrat.waljon.Adapter.Ad_WishList;
 import com.iwtechnocrat.waljon.Adapter.ViewPagerCustomerAdapter;
+import com.iwtechnocrat.waljon.Model.HomeCatModel;
+import com.iwtechnocrat.waljon.Model.RecentlyViewedModel;
+import com.iwtechnocrat.waljon.Model.ServicesListModel;
 import com.iwtechnocrat.waljon.Model.Shop_by_Brand_model;
+import com.iwtechnocrat.waljon.Model.TopCategoriesModel;
+import com.iwtechnocrat.waljon.Model.WishListModel;
 import com.iwtechnocrat.waljon.R;
 
 import java.util.ArrayList;
@@ -41,12 +50,18 @@ public class HommeeFragment extends Fragment {
     ArrayList<Shop_by_Brand_model> shop_by_brand_models = new ArrayList<>();
     SearchView searchview;
     EditText inputSearch;
-
-
-
+    ArrayList<ServicesListModel> servicesListModelArrayList = new ArrayList<>();
     ListView lv;
-
     ArrayList<String> productList = new ArrayList<>();
+
+    RecyclerView recycle_notification,recently_viewed;
+    ArrayList<TopCategoriesModel> notificationModels= new ArrayList<>();
+    ArrayList<RecentlyViewedModel> wishListModels = new ArrayList<>();
+
+
+
+
+
 
     public HommeeFragment(){
 
@@ -59,9 +74,44 @@ public class HommeeFragment extends Fragment {
         viewPager = view.findViewById(R.id.viewPager);
         sliderDotspanel = view.findViewById(R.id.SliderDots);
         recycle_shopbybrand = view.findViewById(R.id.recycle_shopbybrand);
+        recycle_notification = view.findViewById(R.id.recycle_top);
+        recently_viewed = view.findViewById(R.id.recently_viewed);
      //   searchview = view.findViewById(R.id.searchview);
 
+
+
+
         context = getContext();
+
+        notificationModels.add(new TopCategoriesModel(R.drawable.cosmatics,"1","Makeup"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.skin,"2","Skin"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.hiar,"3","Hair"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.appliances,"4","Aplliances"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.watch,"5","Personal Care"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.jwellery,"6","Fashion  Jwellery"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.foot_wear,"7","Foot wear"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.watch,"8","Bags"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.watch,"9","Sunglasses and frames"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.watch,"10","Undergarmentd"));
+        notificationModels.add(new TopCategoriesModel(R.drawable.watch,"11","Ladies Wears "));
+        notificationModels.add(new TopCategoriesModel(R.drawable.watch,"12","Watches and belts"));
+
+        Ad_TopCategories ad_getSubject =new Ad_TopCategories(getContext(),notificationModels);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+        recycle_notification.setLayoutManager(layoutManager);
+        recycle_notification.setAdapter(ad_getSubject);
+
+
+
+        wishListModels.add(new RecentlyViewedModel("Fossil","250","50", R.drawable.watch));
+        wishListModels.add(new RecentlyViewedModel("Fossil","250","50", R.drawable.watch));
+        Ad_RecentlyViewd ad_wishList = new Ad_RecentlyViewd(getContext(),wishListModels);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2);
+        gridLayoutManager.setOrientation(LinearLayoutManager.VERTICAL); // set Horizontal Orientation
+        recently_viewed.setLayoutManager(gridLayoutManager);
+        recently_viewed.setAdapter(ad_wishList);
+
+
 
 
 
@@ -111,14 +161,18 @@ public class HommeeFragment extends Fragment {
 
         LinearLayoutManager linearLayoutManager3=new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false);
         recycle_shopbybrand.setLayoutManager(linearLayoutManager3);
-        shop_by_brand_models.add(new Shop_by_Brand_model("Jwellery", R.drawable.jwelleryone));
-        shop_by_brand_models.add(new Shop_by_Brand_model("Lipstick", R.drawable.lipstick));
-        shop_by_brand_models.add(new Shop_by_Brand_model("Sandal", R.drawable.lipstick));
-        shop_by_brand_models.add(new Shop_by_Brand_model("Jwellery", R.drawable.jwelleryone));
-        shop_by_brand_models.add(new Shop_by_Brand_model("Jwellery", R.drawable.jwelleryone));
-       Ad_ShopByBrand ad_shopByBrand = new Ad_ShopByBrand(context, shop_by_brand_models);
+        shop_by_brand_models.add(new Shop_by_Brand_model("jhd","24","25","WINTER WEAR OFFER","jhhj","0","","status",R.drawable.winter));
+        shop_by_brand_models.add(new Shop_by_Brand_model("jhd","24","25","WINTER WEAR OFFER","jhhj","1","","status",R.drawable.winter));
+
+//        shop_by_brand_models.add(new Shop_by_Brand_model("Jwellery", R.drawable.jwelleryone));
+//        shop_by_brand_models.add(new Shop_by_Brand_model("Lipstick", R.drawable.lipstick));
+//        shop_by_brand_models.add(new Shop_by_Brand_model("Sandal", R.drawable.lipstick));
+//        shop_by_brand_models.add(new Shop_by_Brand_model("Jwellery", R.drawable.jwelleryone));
+//        shop_by_brand_models.add(new Shop_by_Brand_model("Jwellery", R.drawable.jwelleryone));
+       Ad_ShopByBrand ad_shopByBrand11 = new Ad_ShopByBrand(context, shop_by_brand_models);
+     //  Ad_ShopByBrand ad_shopByBrand = new Ad_ShopByBrand();
         recycle_shopbybrand.setHasFixedSize(true);
-        recycle_shopbybrand.setAdapter(ad_shopByBrand);
+        recycle_shopbybrand.setAdapter(ad_shopByBrand11);
 
 
 

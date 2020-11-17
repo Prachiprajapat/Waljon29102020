@@ -8,12 +8,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.iwtechnocrat.waljon.Activities.Act_CancelOrder;
 import com.iwtechnocrat.waljon.Activities.Act_OrderDetails;
+import com.iwtechnocrat.waljon.Activities.BottomSheetDialog;
 import com.iwtechnocrat.waljon.Model.OrderCompleteModel;
 import com.iwtechnocrat.waljon.R;
 import com.iwtechnocrat.waljon.UI.ItemClickListner;
@@ -68,9 +73,18 @@ public class Ad_OrderComplete extends RecyclerView.Adapter<Ad_OrderComplete.View
         holder.btn_track.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,
 
-                        )
+//                AppCompatActivity appCompatActivity = new AppCompatActivity();
+//                FragmentManager fragmentManager = appCompatActivity.getSupportFragmentManager();
+                final BottomSheetDialog bt=new BottomSheetDialog();
+                View view= LayoutInflater.from(context).inflate(R.layout.try_layorder,null);
+                 return ;
+
+
+//                com.iwtechnocrat.waljon.Activities.Order_TrackBottomSheet bottomSheetFragment = new      com.iwtechnocrat.waljon.Activities.Order_TrackBottomSheet();
+//                bottomSheetFragment.show(((FragmentActivity)context).getSupportFragmentManager(), bottomSheetFragment.getTag());
+
+
             }
         });
 

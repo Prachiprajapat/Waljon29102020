@@ -1,80 +1,90 @@
 package com.iwtechnocrat.waljon.Model;
 
-public class CartModel {
-    String id,shopname,gender,size,qnty,total_price,off;
-     int image;
-    public CartModel(String id, int image, String shopname, String gender, String size, String qnty, String total_price, String off) {
-        this.id = id;
-        this.image = image;
-        this.shopname = shopname;
-        this.gender = gender;
-        this.size = size;
-        this.qnty = qnty;
-        this.total_price = total_price;
-        this.off = off;
+public class CartModel  {
+    String serImage,userImage;
+    String serName,serPrice,serSample,PId,status;
+    int serId,qty;
+
+    public CartModel(String serImage, String serName, String serPrice, String serSample,int serId,int qty,String PId,String status,String userImage) {
+        this.serImage = serImage;
+        this.serName = serName;
+        this.serPrice = serPrice;
+        this.serSample = serSample;
+        this.serId=serId;
+        this.qty=qty;
+        this.PId=PId;
+        this.status=status;
     }
 
-    public String getId() {
-        return id;
+    public String getUserImage() {
+        return userImage;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
     }
 
-    public int getImage() {
-        return image;
+    public String getStatus() {
+        return status;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public String getShopname() {
-        return shopname;
+    public String getPId() {
+        return PId;
     }
 
-    public void setShopname(String shopname) {
-        this.shopname = shopname;
+    public void setPId(String PId) {
+        this.PId = PId;
     }
 
-    public String getGender() {
-        return gender;
+    public int getQty() {
+        return qty;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 
-    public String getSize() {
-        return size;
+    public int getSerId() {
+        return serId;
     }
 
-    public void setSize(String size) {
-        this.size = size;
+    public void setSerId(int serId) {
+        this.serId = serId;
     }
 
-    public String getQnty() {
-        return qnty;
+    public String getSerImage() {
+        return serImage;
     }
 
-    public void setQnty(String qnty) {
-        this.qnty = qnty;
+    public void setSerImage(String serImage) {
+        this.serImage = serImage;
     }
 
-    public String getTotal_price() {
-        return total_price;
+    public String getSerName() {
+        return serName;
     }
 
-    public void setTotal_price(String total_price) {
-        this.total_price = total_price;
+    public void setSerName(String serName) {
+        this.serName = serName;
     }
 
-    public String getOff() {
-        return off;
+    public String getSerPrice() {
+        return serPrice;
     }
 
-    public void setOff(String off) {
-        this.off = off;
+    public void setSerPrice(String serPrice) {
+        this.serPrice = serPrice;
+    }
+
+    public String getSerSample() {
+        return serSample;
+    }
+
+    public void setSerSample(String serSample) {
+        this.serSample = serSample;
     }
 }

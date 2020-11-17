@@ -18,7 +18,6 @@
     <string name="question7">How do i create a return request ?</string>
 
 
-
     <string name="answer1">You Can cancel an order when it is in packed /shipped status as long as the
         cancel option is available on App .This includes items purchased on sale also .Any amount paid will be credited into the same paymet
          mode using which the payment was made?</string>
@@ -48,7 +47,6 @@
     <string name="answer13">No at this point waljon delivers product only within india</string>
 
 
-
     <string name="question21">How do i create an account  on waljon?</string>
     <string name="answer21">You can create your account on waljon by entering and verifying your mobile number click
     on create  new account after that and fill up the form to create your  waljon acount </string>
@@ -64,7 +62,6 @@
     <string name="answer25">mobile numbers given along with shipping address cannot be used to log in on waljon to use a nimber for login on waljon you need to add your number to your profile and verify it with OTP this can be done under profile section in account  </string>
 
 
-
     <string name="question31">How can i pay for my order at waljon ?</string>
     <string name="answer31">we support thw following payment option at waljon </string>
     <string name="question32">What should i do if my payment fails ?</string>
@@ -72,8 +69,6 @@
      account details billing address and passwords if your payment still fails you can use the  cash on delivery (COD) payment option
     ,if available on the payment page to place your  order ,if your payment is debited from your account  after a payment failure
     ,it will be credited back within 7-10 days ,after we recieving a confirmation from the bank</string>
-
-
 
 
 </resources>

@@ -5,13 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.iwtechnocrat.waljon.Model.CartModel;
+import com.iwtechnocrat.waljon.Model.CartModel11;
 import com.iwtechnocrat.waljon.R;
 import com.squareup.picasso.Picasso;
 
@@ -19,9 +18,9 @@ import java.util.List;
 
 public class Ad_Cart extends RecyclerView.Adapter<Ad_Cart.Viewholder> {
     Context context;
-    List<CartModel> cartModelListView;
+    List<CartModel11> cartModelListView;
 
-    public Ad_Cart(Context context, List<CartModel> cartModelListView) {
+    public Ad_Cart(Context context, List<CartModel11> cartModelListView) {
         this.context = context;
         this.cartModelListView = cartModelListView;
     }
@@ -36,7 +35,7 @@ public class Ad_Cart extends RecyclerView.Adapter<Ad_Cart.Viewholder> {
 
     @Override
     public void onBindViewHolder(@NonNull Ad_Cart.Viewholder holder, int position) {
-        CartModel cartModel = cartModelListView.get(position);
+        CartModel11 cartModel = cartModelListView.get(position);
         holder.tv_off.setText("OFF"+cartModel.getOff());
         holder.tv_genderfor.setText(cartModel.getGender());
         holder.qnty.setText("Qty"+cartModel.getQnty());

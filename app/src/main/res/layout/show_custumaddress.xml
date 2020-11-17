@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="Home"
+            android:id="@+id/addresstype"
+            android:layout_marginLeft="2dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_alignParentEnd="true">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/lay">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:id="@+id/name"
+                android:layout_marginTop="1dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="Name"
+                android:textSize="14sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:id="@+id/houseno"
+
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="34 dahiwar dhamnod"
+                android:textSize="12sp"
+                android:textStyle="normal">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="2dp"
+                    android:gravity="center_vertical"
+                   android:id="@+id/district"
+                    android:text="Dharmapuri"
+                    android:textSize="12sp"
+                    android:textStyle="normal">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="2dp"
+                    android:id="@+id/pincode"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="454552"
+                    android:textSize="12sp"
+                    android:textStyle="normal">
+
+                </TextView>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:id="@+id/state"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="Madhya Pradesh"
+                android:textSize="12sp"
+                android:textStyle="normal">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:id="@+id/mobile"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="9977952100"
+                android:textSize="12sp"
+                android:textStyle="normal">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_below="@+id/lay"
+            android:id="@+id/view">
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/view"
+            android:orientation="horizontal"
+
+            android:weightSum="1"
+         >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Edit"
+                android:id="@+id/edit"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue1"
+                android:background="@color/white">
+
+            </Button>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:background="@color/grey">
+
+            </View>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="remove"
+                android:id="@+id/remove"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue1"
+                android:background="@color/white">
+
+            </Button>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -8,7 +9,7 @@ android {
 
 
         applicationId "com.iwtechnocrat.waljon"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -34,17 +35,18 @@ dependencies {
 
     implementation 'com.google.android.libraries.places:places:2.4.0'
 
-  // implementation ' com.google.android.libraries.places.api'
+    // implementation ' com.google.android.libraries.places.api'
 
-   //implementation 'com.google.android.gms:play-services-places:10.2.1'
+    //implementation 'com.google.android.gms:play-services-places:10.2.1'
     implementation 'io.nlopez.smartlocation:library:3.3.1'
     implementation 'com.otaliastudios:autocomplete:1.1.0'
-
 
 
     implementation 'com.google.android.gms:play-services-auth:18.0.0'
     implementation 'com.google.android.gms:play-services-vision:20.0.0'
     implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.0'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -63,7 +65,19 @@ dependencies {
 
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.google.android.material:material:1.2.0-alpha02'
-  //  implementation project(':autocomplete')
+    implementation 'com.github.scottyab:showhidepasswordedittext:0.8'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.karumi:dexter:6.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.android.volley:volley:1.1.1'
+
+
+
+
+    //  implementation project(':autocomplete')
 
 
 }
