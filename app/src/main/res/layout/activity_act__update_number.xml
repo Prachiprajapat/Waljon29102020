@@ -109,7 +109,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Enter number"
-                        android:id="@+id/ed2"
+                        android:id="@+id/et_number"
                         android:cursorVisible="true"
                         android:layout_gravity="top"
                         android:textSize="20sp">
@@ -124,7 +124,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:text="Continue"
-                    android:id="@+id/btn_login"
+                    android:id="@+id/btn_continue"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:background="@color/dark_blue1"

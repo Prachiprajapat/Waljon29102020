@@ -404,6 +404,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="2dp"
+                    android:id="@+id/btn_placeorder"
                     android:text="place order"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/dark_blue1"

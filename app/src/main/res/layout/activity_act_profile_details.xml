@@ -300,7 +300,7 @@
                               android:padding="10dp"
                               app:fontFamily="@font/poppins" />
                           <EditText
-                              android:id="@+id/userFirstName"
+                              android:id="@+id/et_email"
                               android:layout_width="match_parent"
                               android:layout_height="50dp"
                               android:hint="Email"
@@ -320,8 +320,8 @@
                               android:orientation="horizontal"
                               android:layout_marginTop="2dp"
                               android:weightSum="1">
-                              <EditText
-                                  android:id="@+id/female"
+                              <Button
+                                  android:id="@+id/btn_female"
                                   android:layout_width="0dp"
                                   android:layout_height="50dp"
                                   android:hint="Female"
@@ -337,8 +337,8 @@
                                   android:padding="10dp"
                                   app:fontFamily="@font/poppins" />
 
-                              <EditText
-                                  android:id="@+id/male"
+                              <Button
+                                  android:id="@+id/btn_male"
                                   android:layout_width="0dp"
                                   android:layout_height="50dp"
                                   android:hint="Male"
@@ -376,7 +376,7 @@
                               app:fontFamily="@font/poppins" />
 
                           <EditText
-                              android:id="@+id/location"
+                              android:id="@+id/et_location"
                               android:layout_width="match_parent"
                               android:layout_height="50dp"
                               android:hint="Location"

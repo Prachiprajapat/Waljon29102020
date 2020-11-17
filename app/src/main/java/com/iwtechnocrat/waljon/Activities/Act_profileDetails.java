@@ -18,6 +18,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -47,9 +48,11 @@ public class Act_profileDetails extends AppCompatActivity {
     private static final int PICK_IMAGE = 103;
     private static final int ADHAR_IMAGE = 104;
     private static final int PICK_FROM_GALLERY = 1;
-    String encodeImage, encodeImage1;
+    String encodeImage, encodeImage1,gender;
     Bitmap profile, background,PanCardPhoto,GstPhoto;
     DatePickerDialog datePickerDialog;
+    Button btn_male,btn_female;
+
 
 
     @Override
@@ -64,6 +67,18 @@ public class Act_profileDetails extends AppCompatActivity {
         dob = findViewById(R.id.dob);
         chngenumber = findViewById(R.id.chngenumber);
 
+        btn_female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gender ="Female";
+            }
+        });
+        btn_male.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gender ="Male";
+            }
+        });
 
         chngenumber.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -21,6 +21,7 @@ public class Act_Add_Address extends AppCompatActivity {
     RadioButton rd_home,rd_office;
     LinearLayout lay_office;
     EditText username,usercity,userpincode,userstate,usermobile,useraddress,userlocality;
+    String name ,city,pincode,state,mobile,address,locality,TYPE;
 
 
     @Override
@@ -41,9 +42,18 @@ public class Act_Add_Address extends AppCompatActivity {
         userpincode = findViewById(R.id.userpincode);
         usermobile = findViewById(R.id.usermobile);
         userstate = findViewById(R.id.userstate);
+
+
         save_address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = username.getText().toString();
+                city = usercity.getText().toString();
+                pincode = userpincode.getText().toString();
+                state = userstate.getText().toString();
+                mobile = usermobile.getText().toString();
+                address = useraddress.getText().toString();
+                locality = userlocality.getText().toString();
                 Intent intent = new Intent(getApplicationContext(),Act_ShowAddress.class);
                 startActivity(intent);
             }
@@ -66,11 +76,13 @@ public class Act_Add_Address extends AppCompatActivity {
                 {
                     case R.id.rd_home:
                         save_address.setBackgroundResource(R.color.dark_blue1);
+                        TYPE = "hOME";
                         // TODO Something
                         break;
                     case R.id.rd_office:
                         save_address.setBackgroundResource(R.color.dark_blue1);
                         lay_office.setVisibility(View.VISIBLE);
+                        TYPE = "Office";
                         // TODO Something
                         break;
 

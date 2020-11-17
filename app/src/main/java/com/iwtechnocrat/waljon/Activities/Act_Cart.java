@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class Act_Cart extends AppCompatActivity {
     TextView tv_wishlist;
     BottomSheetBehavior behavior;
     RecyclerView recycle_cart;
+    Button btn_placeorder;
     ArrayList<CartModel11> cartModels = new ArrayList<>();
 
 
@@ -36,6 +38,7 @@ public class Act_Cart extends AppCompatActivity {
         back = findViewById(R.id.back);
         tv_wishlist = findViewById(R.id.wishlist);
         recycle_cart = findViewById(R.id.recycle_cart);
+        btn_placeorder = findViewById(R.id.btn_placeorder);
 
 
         back.setOnClickListener(new View.OnClickListener() {
